@@ -23,6 +23,11 @@ import urllib
 import argparse
 
 
+if sys.version_info[0] >= 3:
+    raise Exception("This program requires Python 2 to run.")
+    sys.exit(1)
+
+
 def read_urls(filename):
     """Returns a list of the puzzle urls from the given log file,
     extracting the hostname from the filename itself.
